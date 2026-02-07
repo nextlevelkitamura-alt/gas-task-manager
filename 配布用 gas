@@ -1,0 +1,105 @@
+// ==========================================
+// ★ 設定項目（ここだけ書き換えてください）
+// ==========================================
+
+
+// ライブラリ名（ID追加時に設定した名前と一致させる）
+const LIB = TaskManager;
+
+
+// ==========================================
+// 1. 認証チェック
+// ==========================================
+// 認証ロジックはすべてライブラリ側に移動しました
+// これにより、配布コードを改竄しても認証を回避できません
+
+
+
+
+// ==========================================
+// 2. メニューとトリガー（マスターと完全一致）
+// ==========================================
+function onOpen() {
+const ui = SpreadsheetApp.getUi();
+ui.createMenu('📅 タスク連携')
+  .addItem('設定: 自動化トリガーをセット (更新時も実行)', 'setupTriggers')
+  .addItem('🔧 設定チェック (初期診断)', 'checkConfiguration') // ★追加
+  .addSeparator()
+  .addItem('手動: プロジェクトシート作成', 'createProjectSheets')
+  .addItem('手動: カレンダー同期 (タスク入力)', 'syncTasksToCalendar')
+  .addItem('手動: 【統合】同期・転送・並び替え (タスク入力)', 'executeTasksAction')
+  .addItem('手動: タスク一覧更新 (統合版)', 'updateDashboardWithCalendarSync')
+  .addSeparator()
+  .addItem('🔧 レイアウト修復 (チェックボックス再設置)', 'repairCheckboxes') // ★追加
+  .addToUi();
+}
+
+
+// 編集時のトリガー
+function onEditTrigger(e) {
+LIB.onEditTrigger(e);
+}
+
+
+// ==========================================
+// 3. 機能呼び出し（ラッパー関数）
+// ==========================================
+
+
+// トリガー設定
+function setupTriggers() {
+LIB.setupTriggers();
+}
+
+
+// 設定チェック
+function checkConfiguration() {
+LIB.checkConfiguration();
+}
+
+
+// レイアウト修復
+function repairCheckboxes() {
+LIB.repairCheckboxes();
+}
+
+
+// プロジェクト作成
+function createProjectSheets() {
+LIB.createProjectSheets();
+}
+
+
+// カレンダー同期
+function syncTasksToCalendar() {
+LIB.syncTasksToCalendar();
+}
+
+
+// 統合実行
+function executeTasksAction() {
+LIB.executeTasksAction();
+}
+
+
+// ダッシュボード更新
+function updateDashboardWithCalendarSync() {
+LIB.updateDashboardWithCalendarSync();
+}
+
+
+// ==========================================
+// 4. 定期実行トリガー用
+// ==========================================
+
+
+// カレンダー -> シート (15分ごと)
+function syncFromCalendarToSheets() {
+LIB.syncFromCalendarToSheets();
+}
+
+
+// ダッシュボード更新 (1時間ごと)
+function updateDashboard() {
+LIB.updateDashboard();
+}

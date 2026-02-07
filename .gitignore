@@ -1,0 +1,22 @@
+# 環境変数
+.env
+.env.local
+.env.*.local
+docs/env.md
+
+# clasp
+.clasp.json
+.claspignore
+
+# Node modules
+node_modules/
+
+# macOS
+.DS_Store
+
+# 一時ファイル
+*.tmp
+*.log
+
+# Google Apps Script
+appsscript.json
