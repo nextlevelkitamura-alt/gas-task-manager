@@ -35,7 +35,7 @@ clasp login
 
 ### 2. GitHubリポジトリのクローン
 ```bash
-git clone https://github.com/{user}/gas-task-manager.git
+git clone https://github.com/nextlevelkitamura-alt/gas-task-manager.git
 cd gas-task-manager
 ```
 

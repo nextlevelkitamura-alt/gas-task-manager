@@ -10,7 +10,7 @@
 | Web App（認証用） | デプロイ後に生成 | 認証機能用エンドポイント |
 
 ## Git管理
-- リポジトリ: https://github.com/{user}/gas-task-manager
+- リポジトリ: https://github.com/nextlevelkitamura-alt/gas-task-manager
 - ブランチ戦略: main（本番）、develop（開発）
 
 ## Google Apps Script

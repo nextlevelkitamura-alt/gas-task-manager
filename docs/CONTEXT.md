@@ -12,7 +12,7 @@
 - Web App デプロイ
 
 ## インフラ
-- Git: https://github.com/{user}/gas-task-manager（作成予定）
+- Git: https://github.com/nextlevelkitamura-alt/gas-task-manager
 - 配布: スプレッドシートコピー + Web App
 
 ## 現在の状況

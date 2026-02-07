@@ -8,7 +8,7 @@
 - **デプロイ**: Web App（認証機能付き）
 
 ## インフラ
-- **Git**: https://github.com/{user}/gas-task-manager（作成予定）
+- **Git**: https://github.com/nextlevelkitamura-alt/gas-task-manager
 - **配布方法**: スプレッドシートのコピー配布
 - **認証**: メールアドレスベースの認証システム
 
